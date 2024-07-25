@@ -1,11 +1,5 @@
 #include <iostream>
-
-double add(double num1, double num2);
-double subtract(double num1, double num2);
-double divide(double num1, double num2);
-double multiply(double num1, double num2);
-
-//func declarations
+#include "main.h"
 
 int main() {
     double num1;
@@ -19,35 +13,7 @@ int main() {
     std::cin >> operation_type;
     std::cout<< "enter second number : " << std::endl;
     std::cin >> num2;
+    evaluated_value = evaluate(num1, num2, operation_type);
 
-    switch(operation_type) {
-        case '+':
-        add(num1, num2);
-        case '-':
-        subtract(num1, num2);
-        case '/':
-        divide(num1, num2);
-        case '*':
-        multiply(num1, num2);
-    }
-}
-
-double add(double num1, double num2) {
-    return num1+num2;
-}
-
-double subtract(double num1, double num2) {
-    return num1-num2;
-}
-
-double divide(double num1, double num2) {
-    if(num2 < 0) {
-        std::cout<< "invalid" << std::endl;
-    } else {
-        return num1/num2;
-    }
-}
-
-double multiply(double num1, double num2) {
-    return num1*num2;
+    std::cout << "The evaluated value is equal to : " << evaluated_value << std::endl;
 }
