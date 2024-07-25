@@ -1,5 +1,6 @@
 #include <iostream>
 #include "main.h"
+#include "value_checks.h"
 
 int main() {
     double num1;
