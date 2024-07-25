@@ -5,6 +5,22 @@ double subtract(double num1, double num2);
 double divide(double num1, double num2);
 double multiply(double num1, double num2);
 double evaluate(double num1, double num2, char operation_type);
+double get_number();
+char get_operator();
+
+double get_number() {
+    double number;
+    std::cout << "enter number" << std::endl;
+    std::cin >> number;
+    return number;
+}
+
+char get_operator() {
+    char operator_val;
+    std::cout << "enter operator" << std::endl;
+    std::cin >> operator_val;
+    return operator_val;
+}
 
 double add(double num1, double num2) {
     return num1+num2;
@@ -47,8 +63,7 @@ double evaluate(double num1, double num2, char operation_type) {
         break;
 
         default:
-        std::cout<< "invalid or no operator found" << std::endl;
-
+        break;
     }
     return evaluated_value;
 }
