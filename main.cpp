@@ -22,6 +22,7 @@ double runProgram() {
         if (check_char_type(operation_type) == true) {
             evaluated_value = evaluate(num1,num2,operation_type);
             std::cout << "computer says answer is :  " << evaluated_value << std::endl; 
+            std::cout << "computer says value in binary is : " << std::bitset<16>(evaluated_value).to_string() << std::endl;
             return evaluated_value;
         } else {
             std::cout << "computer says : \"check your operator\" " << std::endl;
